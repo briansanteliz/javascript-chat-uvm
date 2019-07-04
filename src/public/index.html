@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="shortcut icon" type="image/x-icon" href="img/uvm.png"/>
+	<!--bootstrap-->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<!--FONTAWESOME-->
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/fontawesome-all.min.css">
+	<!-- Css personalizados-->
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<title>Chat Javascript</title>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-warning">
+		<div  class="container">
+			<a class="navbar-brand mx-2" href="/">Javascript Chat</a>
+			<br><a class="navbar-brand mx-0" >Universidad valle del momboy</a>
+			<a class="navbar-brand mx-2" >Diseñado: Brian Santeliz</a>
+		</div>
+	</nav>
+
+	<div class="card col-md-4 mt-5 mx-auto" id="nickWrap" >
+		<div class="card-header">
+			<h3>Ingresa Tu Nombre:</h3>
+		</div>
+		<p id="nickError"></p>
+		<div class="card-body">
+			<form id="nickForm">
+				<input type="text" id="nickname" class="form-control">
+				<button type="submit" class="btn btn-warning mt-2">
+					<i class="fas fa-location-arrow"></i> Enviar
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container" id="contentWrap">
+		<div class="row mt-2">
+			<div class="col-md-6 offset-md-1">
+			<div class="card">
+				<div class="card-header">
+					<h4>Escribe un mensaje:</h4>
+				</div>
+
+				<div id="chat" class="card-body"></div>
+				<form id="message-form" class="card-footer">
+					<div class="input-group">
+						<input type="text" id="message" class="form-control">
+					<div class="input-group-append">
+						<button type="submit" class="btn btn-warning">
+							<i class="fas fa-location-arrow"></i> Enviar
+						 </button>
+					</div>
+					</div>
+				</form>
+
+
+			</div>	
+		</div>
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-header">
+						<h3>Usuarios</h3>
+					</div>
+					<div class="card-body">
+						<div id="usernames"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--JQUERY-->
+	<script type="text/javascript" src="assets/jquery/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
