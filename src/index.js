@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = socketio.listen(server);
 
 //Mongo DB
-mongoose.connect('mongodb+srv://lean:lean@cluster0-fevdd.mongodb.net/test?retrywrites=true&w=majority', {
+mongoose.connect('mongodb+srv://localhost/my-db', {
 useNewUrlParser: true
 }) 
   .then(db => console.log(`DB is connected`))
